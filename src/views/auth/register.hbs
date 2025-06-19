@@ -1,5 +1,12 @@
-<h2>Registro</h2>
-<form method="POST" action="/auth/register">
+{{> navbar}}
+<div class="container-form">
+  <div class="row">
+    <div class="col-md-12 text-center">
+      <h2>Regístrate</h2>
+      <p>Por favor, completa el formulario para crear una cuenta</p>
+    </div>
+  </div>
+  <form method="POST" action="/auth/register">
   <input name="username" placeholder="Nombre de usuario" required />
   <input name="email" type="email" placeholder="Email" required />
   <input name="password" type="password" placeholder="Contraseña" required />
@@ -11,3 +18,5 @@
 {{#if success}}
   <p style="color: green;">{{success}}</p>
 {{/if}}
+</div>
+{{> footer}}
