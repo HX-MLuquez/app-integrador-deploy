@@ -12,6 +12,7 @@ import { ConfigService } from '@nestjs/config';
 import configuration from './config/configuration';
 
 import { CurrentUserMiddleware } from './common/middleware/current-user.middleware';
+import { CalendarModule } from './calendar/calendar.module';
 
 @Module({
   imports: [
@@ -26,6 +27,7 @@ import { CurrentUserMiddleware } from './common/middleware/current-user.middlewa
     }),
     UsersModule,
     AuthModule,
+    CalendarModule,
   ],
   controllers: [AppController],
   providers: [AppService],
