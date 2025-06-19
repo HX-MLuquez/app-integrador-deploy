@@ -1,0 +1,13 @@
+{{> navbar}}
+<div class="card-grid">
+  <div class="card">
+    <h1>Perfil de Usuario</h1>
+{{#if user}}
+  <p><strong>Nombre:</strong> {{user.username}}</p>
+  <p><strong>Email:</strong> {{user.email}}</p>
+  <p><strong>Rol:</strong> {{user.role}}</p>
+{{else}}
+  <p>No hay usuario autenticado.</p>
+{{/if}}
+  </div>
+</div>
